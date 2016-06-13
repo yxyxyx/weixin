@@ -1,0 +1,15 @@
+<div id="weixin">
+<ul>
+	<li id="tiao" ng-repeat="v in weixinlist" >
+		<div class="zuo" ng-swipe-left="show=true" ng-swipe-right="show=false" ng-init="show=false" ng-class="{'show-delete':show}">
+          <img src="{{v.image}}" alt="" class="circle">
+          <div class="xinxi">
+            <span class="name">{{v.name}}</span>
+            <span class="content">{{v.content}}</span>
+          </div>
+          <a href="#/weixin{{$index}}"></a>
+      </div>
+      <div ng-click="deletelist($index)" class="delete">删除</div>
+	</li>
+</ul>
+</div>
